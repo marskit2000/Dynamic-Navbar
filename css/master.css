@@ -1,0 +1,138 @@
+:root {
+  --theme-1: #ae5ef2;
+  --theme-2: #2f8fcf;
+  --theme-3: #2fcf51;
+  --theme-4: #f2e75e;
+  --theme-5: #e95181;
+  --theme-6: #ff8249;
+  --theme-7: #5ef29c;
+  --theme-8: #747dff;
+  --theme-9: #e95181;
+  --theme-10: #a98ebf;
+}
+
+body {
+  background-color: var(--theme-1);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 1s;
+
+  font-family: 'Inter', sans-serif;
+
+}
+
+h1{
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0 0 15px #333;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+svg {
+  color: #111;
+}
+
+/* .outer-container {
+  width: 400px;
+  position: relative;
+  background: yellow;
+  display: flex;
+  align-items: center;
+
+} */
+
+.navbar-container {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 20px 30px;
+  box-shadow: 0 0 15px #666;
+}
+
+.navbar-vertical {
+  width: 60px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 30px 40px;
+  box-shadow: 0 0 15px #666;
+}
+
+.navbar-item {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-item svg{
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-circle-indicator {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--theme-1);
+  z-index: 0;
+  transition: all .3s;
+  opacity: 0.7;
+}
+
+.animate {
+  animation: circleIndicatorAnimation 1s both;
+}
+
+@keyframes circleIndicatorAnimation {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.navbar-line-indicator {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-left:8px solid var(--theme-1);
+  z-index: 0;
+  transition: all .3s;
+  opacity: 0.7;
+}
